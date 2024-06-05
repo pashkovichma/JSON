@@ -1,5 +1,10 @@
 # JSON parser
 
+## Contents
+- [Owerview](#owerview)
+- [Tokenization with regular expressions](#tokenization-with-regular-expressions)
+
+## Owerview
 The myJSONParse function takes a JSON-formatted string as input and returns the 
 corresponding JavaScript object. This is a custom implementation of a JSON parser
 in JavaScript. The function uses regular expressions to tokenize the input string
@@ -45,5 +50,6 @@ It removes the surrounding quotes and processes escape sequences using a regular
 
 ## Main Logic
 
+Line 105
 The myJSONParse function starts parsing by calling parseValue.
 It checks if all tokens have been consumed; if not, it throws a syntax error.
