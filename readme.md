@@ -3,8 +3,16 @@
 ## Contents
 - [Owerview](#owerview)
 - [Tokenization with regular expressions](#tokenization-with-regular-expressions)
+- [Parse tokens into corresponding JavaScript objects](#parse-tokens-into-corresponding-JavaScript-objects)
+  - [Value parse](#value-parse)
+  - [Object parse](#object-parse)
+  - [Array parse](#array-parse)
+  - [String parse](#string-parse)
+- [Main Logic](#main-logic)
+
 
 ## Owerview
+
 The myJSONParse function takes a JSON-formatted string as input and returns the 
 corresponding JavaScript object. This is a custom implementation of a JSON parser
 in JavaScript. The function uses regular expressions to tokenize the input string
@@ -24,7 +32,7 @@ Strings (handling escape sequences)
 
 ## Parse tokens into corresponding JavaScript objects
 
-### ParseValue
+### Value parse
 Line 16
 The parseValue function determines the type of the current token and calls the appropriate parsing function.
 
