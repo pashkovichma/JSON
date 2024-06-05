@@ -1,6 +1,6 @@
 function myJSONParse(jsonString) {
 
-  //tokenization with regular expressions
+  //Tokenization with regular expressions
   const tokens = [];
   const tokenRegExp = /({|}|\[|\]|:|,|true|false|null|\-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|"([^"\\]*(?:\\.[^"\\]*)*)")/g;
   let match;
@@ -12,7 +12,7 @@ function myJSONParse(jsonString) {
 
   let currentIndex = 0;
 
-  //parse tokens into corresponding JavaScript objects
+  //Parse tokens into corresponding JavaScript objects
   function parseValue() {
     const token = tokens[currentIndex];
     //find type and call necessary function
@@ -39,7 +39,7 @@ function myJSONParse(jsonString) {
     }
   }
 
-  //object parse
+  // Object parse
   function parseObject() {
     const obj = {};
     currentIndex++; // skip '{'
@@ -58,7 +58,7 @@ function myJSONParse(jsonString) {
     return obj;
   }
 
-  //array parse
+  // Array parse
   function parseArray() {
     const arr = [];
     currentIndex++; // skip '['
@@ -73,7 +73,7 @@ function myJSONParse(jsonString) {
     return arr;
   }
 
-  //string parse
+  // String parse
   function parseString() {
     const stringToken = tokens[currentIndex];
     //cut quotes and handle escape sequences
